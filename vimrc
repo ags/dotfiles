@@ -16,7 +16,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'wlangstroth/vim-haskell'
 
 call vundle#end()
 
