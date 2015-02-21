@@ -142,7 +142,7 @@ nnoremap tk :tabnext<CR>
 nnoremap tn :tabnew<CR>
 
 " Quick-edit .vimrc
-nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " Ctrl+L turns off any highlighted matches
 noremap <C-l> :nohlsearch<CR>
