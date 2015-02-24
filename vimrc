@@ -69,7 +69,7 @@ set splitright
 " Allow backspacing over indents and start of insertion point.
 set backspace=indent,start
 
-" move backup files to ~/.vim/sessions
+" Store backup files in ~/.vim/sessions.
 set backupdir=~/.vim/sessions
 set dir=~/.vim/sessions
 
