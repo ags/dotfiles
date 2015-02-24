@@ -98,7 +98,6 @@ let g:ctrlp_custom_ignore .= '/tmp/\|'
 let g:ctrlp_custom_ignore .= '/project/\|'
 let g:ctrlp_custom_ignore .= '/target/\|'
 let g:ctrlp_custom_ignore .= '/node_modules/\|'
-let g:ctrlp_custom_ignore .= '/app/bower_components/\|'
 let g:ctrlp_custom_ignore .= '/plugins/\|'
 let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
 
