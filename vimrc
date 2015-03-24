@@ -104,6 +104,7 @@ let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
 
 " Sort Scala imports into groups.
 let g:scala_sort_across_groups=1
+let g:scala_first_party_namespaces='\(controllers\|views\|models\)'
 
 " Reload .vimrc after save.
 autocmd! BufWritePost .vimrc source %
