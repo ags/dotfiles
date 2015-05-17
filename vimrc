@@ -9,7 +9,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'dag/vim2hs'
+Plugin 'raichoo/haskell-vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'gre/play2vim'
 Plugin 'kchmck/vim-coffee-script'
@@ -34,7 +34,6 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set nofoldenable
 
 " Line numbers are relative to the cursor line.
 set relativenumber
