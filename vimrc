@@ -9,8 +9,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'raichoo/haskell-vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'morhetz/gruvbox'
+Plugin 'raichoo/haskell-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
@@ -78,7 +79,8 @@ set scrolloff=5
 
 " Color scheme
 set t_Co=256
-colors Tomorrow-Night
+set background=dark
+colors gruvbox
 syntax on
 
 " Highlight trailing whitespace etc
