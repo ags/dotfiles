@@ -10,8 +10,6 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'raichoo/haskell-vim'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'gre/play2vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
