@@ -103,10 +103,6 @@ let g:ctrlp_custom_ignore .= '/node_modules/\|'
 let g:ctrlp_custom_ignore .= '/plugins/\|'
 let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
 
-" Sort Scala imports into groups.
-let g:scala_sort_across_groups=1
-let g:scala_first_party_namespaces='\(controllers\|views\|models\)'
-
 " Reload .vimrc after save.
 autocmd! BufWritePost .vimrc source %
 
@@ -161,9 +157,6 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 
 " Convert to ruby 1.9 hash style
 nnoremap <leader>9 xea:<esc>wdw
-
-" Sort Scala imports.
-nnoremap <leader>si :SortScalaImports<cr>
 
 nnoremap <leader>T :call SetTestFileToCurrentFile()<CR>
 nnoremap <leader>t :w\|:call SendCurrentTestToPipe()<CR>
