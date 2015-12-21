@@ -16,6 +16,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'yosiat/oceanic-next-vim'
 
 call vundle#end()
 
@@ -80,7 +81,7 @@ set scrolloff=5
 " Color scheme
 set t_Co=256
 set background=dark
-colors gruvbox
+colors OceanicNext
 syntax on
 
 " Highlight trailing whitespace etc
