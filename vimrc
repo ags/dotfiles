@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'morhetz/gruvbox'
 Plugin 'raichoo/haskell-vim'
