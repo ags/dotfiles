@@ -9,15 +9,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'easysid/mod8.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'morhetz/gruvbox'
 Plugin 'raichoo/haskell-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'yosiat/oceanic-next-vim'
 
 call vundle#end()
 
@@ -82,7 +81,7 @@ set scrolloff=5
 " Color scheme
 set t_Co=256
 set background=dark
-colors OceanicNext
+colors mod8
 syntax on
 
 " Highlight trailing whitespace etc
