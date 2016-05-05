@@ -73,6 +73,7 @@ set backspace=indent,start
 
 " Store backup files in ~/.vim/sessions.
 set backupdir=~/.vim/sessions
+set backupcopy=yes
 set dir=~/.vim/sessions
 
 " Minimum number of lines to keep above/below cursor when scolling
