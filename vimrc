@@ -148,6 +148,9 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " Ctrl+L turns off any highlighted matches
 noremap <C-l> :nohlsearch<CR>
+"
+" Ctrl+D deletes buffer
+noremap <C-D> :bd<CR>
 
 nnoremap <leader>gs :CtrlP spec/<cr>
 nnoremap <leader>gm :CtrlP app/models/<cr>
