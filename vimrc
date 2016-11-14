@@ -114,11 +114,6 @@ augroup filetype_settings
   autocmd BufRead,BufNewFile *.hbs setlocal filetype=html
 augroup END
 
-augroup tab_settings
-  autocmd!
-  autocmd FileType php setlocal shiftwidth=2 tabstop=2 noexpandtab
-augroup END
-
 " Treat @foo as a single word (useful for tab completion).
 autocmd FileType ruby setlocal iskeyword+=@-@
 
