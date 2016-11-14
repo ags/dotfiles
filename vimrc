@@ -160,6 +160,9 @@ nnoremap <leader>ga :CtrlP app/assets/<cr>
 nnoremap <leader>gl :CtrlP lib/<cr>
 nnoremap <C-b> :CtrlPBuffer<CR>
 
+" Ctrl+D deletes current buffer.
+nnoremap <C-d> :bdelete<CR>
+
 " Convert to ruby 1.9 hash style
 nnoremap <leader>9 xea:<esc>wdw
 
