@@ -15,6 +15,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'raichoo/haskell-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 

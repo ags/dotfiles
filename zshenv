@@ -1,4 +1,7 @@
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.bin:$PATH"
+export GOPATH="$HOME/Code/go"
+
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$HOME/.bin"
 
 export GREP_OPTIONS="--color"
 
