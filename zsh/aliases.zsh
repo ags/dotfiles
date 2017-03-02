@@ -27,6 +27,9 @@ alias gs='git st -sb'
 alias gl='git l'
 alias gr='git r'
 
+alias grd='git rebase -i origin/develop'
+alias grm='git rebase -i origin/master'
+
 alias gwip='git add --all . && git commit -m "WIP"'
 
 alias retag='ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules *'
