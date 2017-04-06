@@ -29,6 +29,7 @@ alias gr='git r'
 
 alias grd='git rebase -i origin/develop'
 alias grm='git rebase -i origin/master'
+alias grc='git rebase --continue'
 
 alias gwip='git add --all . && git commit -m "WIP"'
 
