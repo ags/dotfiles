@@ -38,3 +38,5 @@
   mergeoptions = --no-ff
 [rerere]
   enabled = true
+[merge]
+	conflictstyle = diff3
