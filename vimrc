@@ -105,6 +105,7 @@ let g:ctrlp_custom_ignore .= '/project/\|'
 let g:ctrlp_custom_ignore .= '/target/\|'
 let g:ctrlp_custom_ignore .= '/node_modules/\|'
 let g:ctrlp_custom_ignore .= '/plugins/\|'
+let g:ctrlp_custom_ignore .= '/vendor/\|'
 let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
 
 " Reload .vimrc after save.
