@@ -94,6 +94,9 @@ match ExtraWhitespace /\s\+\%#\@<!$/
 let mapleader = ";"
 let g:mapleader = ";"
 
+" run goimports when saving go files
+let g:go_fmt_command = "goimports"
+
 " ctrlp config
 let g:ctrlp_max_height = 16
 let g:ctrlp_custom_ignore = ''
