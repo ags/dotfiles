@@ -10,8 +10,6 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'easysid/mod8.vim'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'raichoo/haskell-vim'
 Plugin 'tpope/vim-fugitive'
