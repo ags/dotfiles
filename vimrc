@@ -2,23 +2,27 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'easysid/mod8.vim'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'raichoo/haskell-vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'fatih/vim-go'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'w0rp/ale'
+Plug '/usr/local/opt/fzf'
+Plug 'easysid/mod8.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'w0rp/ale'
 
-call vundle#end()
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
+Plug 'raichoo/haskell-vim', { 'for': 'haskell' }
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+
+call plug#end()
 
 if filereadable(expand("~/.vim/functions.vim"))
   source ~/.vim/functions.vim
@@ -97,17 +101,15 @@ let g:mapleader = ";"
 " run goimports when saving go files
 let g:go_fmt_command = "goimports"
 
-" ctrlp config
-let g:ctrlp_max_height = 16
-let g:ctrlp_custom_ignore = ''
-let g:ctrlp_custom_ignore .= '/\..*/\|'
-let g:ctrlp_custom_ignore .= '/tmp/\|'
-let g:ctrlp_custom_ignore .= '/project/\|'
-let g:ctrlp_custom_ignore .= '/target/\|'
-let g:ctrlp_custom_ignore .= '/node_modules/\|'
-let g:ctrlp_custom_ignore .= '/plugins/\|'
-let g:ctrlp_custom_ignore .= '/vendor/\|'
-let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
+" ale config
+let g:ale_go_gometalinter_options = "--disable-all
+\ --enable=golint
+\ --enable=vet
+\ --enable=errcheck
+\ --exclude 'should have comment or'
+\"
+
+let g:ale_linters = {'go': ['gometalinter']}
 
 " Reload .vimrc after save.
 autocmd! BufWritePost .vimrc source %
@@ -151,13 +153,8 @@ noremap <C-l> :nohlsearch<CR>
 " Ctrl+D deletes buffer
 noremap <C-D> :bd<CR>
 
-nnoremap <leader>gs :CtrlP spec/<cr>
-nnoremap <leader>gm :CtrlP app/models/<cr>
-nnoremap <leader>gv :CtrlP app/views/<cr>
-nnoremap <leader>gc :CtrlP app/controllers/<cr>
-nnoremap <leader>ga :CtrlP app/assets/<cr>
-nnoremap <leader>gl :CtrlP lib/<cr>
-nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-b> :Buffers<CR>
 
 nnoremap <leader>gi :GoImports<cr>
 
@@ -170,3 +167,50 @@ nnoremap <leader>9 xea:<esc>wdw
 nnoremap <leader>T :call SetTestFileToCurrentFile()<CR>
 nnoremap <leader>t :w\|:call SendCurrentTestToPipe()<CR>
 nnoremap <leader>r :w\|:call ModalRunCurrentTest()<CR>
+
+" Functions
+
+function! PromoteToLet()
+  normal! dd
+  " :exec '?^\s*it\>'
+  normal! P
+  .s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  normal ==
+endfunction
+command! PromoteToLet :call PromoteToLet()
+
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+
+" async test running
+
+function! SetTestFileToCurrentFile()
+  let g:CurrentTestFile = @%
+endfunction
+
+function! GetCurrentTestFile()
+  return g:CurrentTestFile
+endfunction
+
+function! GetTestRunner()
+  return "bundle exec rspec -f d"
+endfunction
+
+function! GetCurrentTestCommand()
+  return "" . GetTestRunner() . " " . GetCurrentTestFile()
+endfunction
+
+function! SendCurrentTestToPipe()
+  let pipeName = ".test-commands"
+  call system("echo " . GetCurrentTestCommand() .  " > " . pipeName)
+endfunction
+
+function! ModalRunCurrentTest()
+  exec "!" . GetCurrentTestCommand()
+endfunction

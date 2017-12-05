@@ -1,5 +1,8 @@
 *.swp
-vim/.netrwhist
-vim/bundle/
-vim/sessions/*.sw*
+
 bin/ngrok
+
+vim/.netrwhist
+vim/plugged/
+vim/sessions/*.sw*
+vim/autoload/plug.vim

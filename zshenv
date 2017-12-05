@@ -2,6 +2,7 @@ export GOPATH="$HOME/Code/go"
 
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:$HOME/.yarn/bin"
 
 export GREP_OPTIONS="--color"
 
