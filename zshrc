@@ -7,7 +7,6 @@ setopt notify
 setopt prompt_subst
 
 auto_sources=(`for f in ~/.zsh/*.zsh; do basename $f .zsh; done`)
-
 for source in $auto_sources; do
   source ~/.zsh/$source.zsh
 done

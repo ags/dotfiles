@@ -18,15 +18,10 @@ Plug 'w0rp/ale'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
-Plug 'raichoo/haskell-vim', { 'for': 'haskell' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 call plug#end()
-
-if filereadable(expand("~/.vim/functions.vim"))
-  source ~/.vim/functions.vim
-endif
 
 " File type detection and language dependent indenting.
 filetype plugin indent on
@@ -143,9 +138,6 @@ nnoremap tj :tabprev<CR>
 nnoremap ti :tabnext<CR>
 nnoremap tk :tabnext<CR>
 nnoremap tn :tabnew<CR>
-
-" Quick-edit .vimrc
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " Ctrl+L turns off any highlighted matches
 noremap <C-l> :nohlsearch<CR>

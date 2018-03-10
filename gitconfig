@@ -1,19 +1,42 @@
 [user]
   name = Alex Smith
   email = ags@fastmail.fm
+
+[core]
+  editor = vim
+	excludesfile = ~/.gitignore
+
 [color]
   ui = auto
+
+[push]
+  default = current
+
+[rerere]
+  enabled = true
+
+[merge]
+	conflictstyle = diff3
+
+[status]
+	showUntrackedFiles = all
+
+[branch "master"]
+  mergeoptions = --no-ff
+
 [alias]
+  aa = add --all
+  br = branch
   ci = commit -v
   co = checkout
-  di = diff
   dc = diff --cached
-  st = status
-  br = branch
-  aa = add --all
+  di = diff
   fa = fetch --all
-  standup = shortlog --since=yesterday
-
+  rc = rebase --continue
+  rod = rebase -i origin/develop
+  rom = rebase -i origin/master
+  st = status -sb
+  
   # Fancy logging from Gary Bernhardt.
   #   h = head
   #   hp = head with patch
@@ -28,17 +51,3 @@
   ra = !git r --all
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
-  pusheen = push
-[core]
-  editor = vim
-	excludesfile = ~/.gitignore
-[push]
-  default = current
-[branch "master"]
-  mergeoptions = --no-ff
-[rerere]
-  enabled = true
-[merge]
-	conflictstyle = diff3
-[status]
-	showUntrackedFiles = all
