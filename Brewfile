@@ -8,6 +8,7 @@ brew "jq"
 brew "the_platinum_searcher"
 brew "tmux"
 brew "vim"
+brew "nvim"
 brew "zsh"
 
 cask "1password"
