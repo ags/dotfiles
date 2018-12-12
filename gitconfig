@@ -29,7 +29,7 @@
 
 [alias]
   aa = add --all
-  br = branch
+  br = branch -vv
   ci = commit -v
   co = checkout
   dc = diff --cached
