@@ -24,6 +24,9 @@
 [branch "master"]
   mergeoptions = --no-ff
 
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+
 [alias]
   aa = add --all
   br = branch
