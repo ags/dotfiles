@@ -25,7 +25,7 @@ set relativenumber
 set background=dark
 colorscheme nord
 
-set shortmess=IF
+"set shortmess=IF
 set inccommand=split
 
 let mapleader = ";"
@@ -76,8 +76,8 @@ let g:ale_go_gometalinter_options = "--disable-all
 let g:ale_linters = {'go': ['gometalinter']}
 
 " Indentation; 2 space default
-"set smartindent
-"set autoindent
+set smartindent
+set autoindent
 set expandtab
 set tabstop=2
 set softtabstop=0
