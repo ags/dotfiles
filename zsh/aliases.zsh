@@ -5,7 +5,7 @@ else
   alias ls='ls -G'
 fi
 
-alias v='vim'
+alias v='nvim'
 
 alias be='bundle exec'
 

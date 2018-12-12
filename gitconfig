@@ -3,7 +3,7 @@
   email = ags@fastmail.fm
 
 [core]
-  editor = vim
+  editor = nvim
 	excludesfile = ~/.gitignore
 
 [color]
