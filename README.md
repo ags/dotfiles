@@ -4,5 +4,5 @@ dotfiles
 Assorted configuration files.
 
 ```
-./install.sh
+./install.fish
 ```

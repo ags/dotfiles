@@ -14,9 +14,6 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 Plug 'arcticicestudio/nord-vim'
-Plug 'easysid/mod8.vim'
-Plug 'nanotech/jellybeans.vim'
-Plug 'w0ng/vim-hybrid'
 
 call plug#end()
 
