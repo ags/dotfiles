@@ -41,3 +41,4 @@
   plog = log --graph --pretty=format:'%C(auto,red)%h · %C(auto,magenta)%an · %C(auto,red)%cr · %C(auto)%s%C(auto,green)%d'
   rc = rebase --continue
   st = status -sb
+  tidy = !git branch --merged | grep -Ev \"(^\\*|master|develop)\" | xargs -n 1 git branch -d
