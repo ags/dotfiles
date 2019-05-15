@@ -62,6 +62,8 @@ autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 " run goimports when saving go files
 let g:go_fmt_command = "goimports"
 
+let g:go_def_mode = 'gopls'
+
 " ale config
 let g:ale_go_gometalinter_options = "--disable-all
 \ --enable=golint
