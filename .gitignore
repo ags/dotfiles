@@ -1,8 +1,1 @@
-*.swp
-
-bin/ngrok
-
-vim/.netrwhist
-vim/plugged/
-vim/sessions/*.sw*
-vim/autoload/plug.vim
+nvim/.netrwhist
