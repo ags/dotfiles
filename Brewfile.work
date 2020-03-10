@@ -1,0 +1,17 @@
+brew "nodenv"
+brew "taglib"
+brew "pngquant"
+brew "imagemagick"
+brew "memcached"
+brew "chruby"
+brew "pv"
+brew "postgres"
+brew "ruby-install"
+brew "node"
+brew "chruby-fish"
+brew "mailhog"
+
+brew "aspell", args: ["--build-from-source"]
+
+cask "chromedriver"
+cask "google-chrome"

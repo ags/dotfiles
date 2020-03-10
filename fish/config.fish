@@ -10,8 +10,7 @@ abbr be 'bundle exec'
 
 alias ga   "git add -p"
 alias gc   "git commit -v"
-alias gfrd "git fetch && git rebase -i origin/develop"
+alias gfrm "git fetch && git rebase -i origin/master"
 alias gp   "git push"
-alias grd  "git rebase -i origin/develop"
 alias grm  "git rebase -i origin/master"
 alias gs   "git st"

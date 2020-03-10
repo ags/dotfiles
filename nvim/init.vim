@@ -12,6 +12,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 
 Plug 'arcticicestudio/nord-vim'
 
@@ -58,6 +59,10 @@ autocmd FileType ruby setlocal iskeyword+=@-@
 
 " Enable spell checking in commit messages.
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+
+" Treat j2 nginx templates as nginx
+autocmd BufRead,BufNewFile nginx.conf.j2 set ft=nginx
+autocmd BufRead,BufNewFile */nginx/templates/*.conf.j2 set ft=nginx
 
 " run goimports when saving go files
 let g:go_fmt_command = "goimports"
