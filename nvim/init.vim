@@ -21,6 +21,12 @@ call plug#end()
 set relativenumber
 
 set background=dark
+
+augroup nord-theme-overrides
+  autocmd!
+  " Use 'nord6' as foreground color for all comments.
+  autocmd ColorScheme nord highlight Comment ctermfg=4
+augroup END
 colorscheme nord
 
 "set shortmess=IF
