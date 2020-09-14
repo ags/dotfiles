@@ -46,3 +46,4 @@
   st = status -sb
   fff = !git fetch && git status && git merge --ff-only
   tidy = !git branch --merged | grep -Ev \"(^\\*|master|develop)\" | xargs -n 1 git branch -d
+  pt = !git pull origin master && git tidy
