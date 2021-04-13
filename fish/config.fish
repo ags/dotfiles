@@ -8,6 +8,8 @@ abbr g git
 abbr v nvim
 abbr be 'bundle exec'
 
+alias cdr "cd (git rev-parse --show-toplevel)"
+
 alias ga   "git add -p"
 alias gc   "git commit -v"
 alias gfrm "git fetch && git rebase -i origin/master"
