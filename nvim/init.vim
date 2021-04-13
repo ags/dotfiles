@@ -99,3 +99,5 @@ noremap <C-l> :nohlsearch<CR>
 
 " Split to right side
 set splitright
+
+let g:terraform_fmt_on_save=1
