@@ -7,9 +7,10 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
+Plug 'hashivim/vim-terraform'
 
+Plug 'smerrill/vcl-vim-plugin', { 'for': 'vcl' }
 Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
