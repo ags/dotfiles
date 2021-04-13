@@ -41,7 +41,7 @@ nnoremap ti :tabnext<CR>
 nnoremap tk :tabnext<CR>
 nnoremap tn :tabnew<CR>
 
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <C-b> :Buffers<CR>
 
 " Ctrl+D deletes buffer
