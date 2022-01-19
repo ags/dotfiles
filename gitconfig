@@ -4,11 +4,11 @@
 
 [core]
   editor = nvim
-	excludesfile = ~/.gitignore
-	attributesfile = /Users/ags/.gitattributes
+  excludesfile = ~/.gitignore
+  attributesfile = /Users/ags/.gitattributes
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [color]
   ui = auto
@@ -26,10 +26,10 @@
   enabled = true
 
 [merge]
-	conflictstyle = diff3
+  conflictstyle = diff3
 
 [status]
-	showUntrackedFiles = all
+  showUntrackedFiles = all
 
 [branch "master"]
   mergeoptions = --no-ff
@@ -41,8 +41,6 @@
   insteadOf = https://github.com/
 
 [alias]
-  tidy = !git branch --merged | grep -Ev \"(^\\*|main|master|develop)\" | xargs -n 1 git branch -d
-  pt = !git pull origin main && git tidy
   aa = add --all
   bv = branch -v
   ci = commit -v
