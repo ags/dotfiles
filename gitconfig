@@ -7,6 +7,9 @@
 	excludesfile = ~/.gitignore
 	attributesfile = /Users/ags/.gitattributes
 
+[init]
+	defaultBranch = main
+
 [color]
   ui = auto
 
@@ -31,10 +34,15 @@
 [branch "master"]
   mergeoptions = --no-ff
 
+[branch "main"]
+  mergeoptions = --no-ff
+
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 
 [alias]
+  tidy = !git branch --merged | grep -Ev \"(^\\*|main|master|develop)\" | xargs -n 1 git branch -d
+  pt = !git pull origin main && git tidy
   aa = add --all
   bv = branch -v
   ci = commit -v
@@ -46,5 +54,5 @@
   rc = rebase --continue
   st = status -sb
   fff = !git fetch && git status && git merge --ff-only
-  tidy = !git branch --merged | grep -Ev \"(^\\*|master|develop)\" | xargs -n 1 git branch -d
-  pt = !git pull origin master && git tidy
+  tidy = !git branch --merged | grep -Ev \"(^\\*|main|master|develop)\" | xargs -n 1 git branch -d
+  pt = !git pull origin main && git tidy
