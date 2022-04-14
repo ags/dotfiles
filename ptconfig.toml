@@ -1,1 +1,1 @@
-ignore = ["vendor", "terraform.tfstate"]
+ignore = ["vendor", "terraform.tfstate", "tags", ".git"]

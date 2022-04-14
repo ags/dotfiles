@@ -86,6 +86,11 @@ let g:ale_go_gometalinter_options = "--disable-all
 
 let g:ale_linters = {'go': ['gometalinter']}
 
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+
 " Indentation; 2 space default
 set smartindent
 set autoindent
