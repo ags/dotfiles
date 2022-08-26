@@ -5,6 +5,7 @@ for f in $HOME/.config/fish/env/*
 end
 
 abbr g git
+abbr k kubectl
 abbr v nvim
 abbr be 'bundle exec'
 
