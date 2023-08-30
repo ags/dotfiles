@@ -2,3 +2,4 @@
 tags
 .env
 results.bin
+.tool-versions

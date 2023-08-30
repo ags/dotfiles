@@ -16,6 +16,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 
 Plug 'arcticicestudio/nord-vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
 
