@@ -21,4 +21,6 @@ alias grm  "git rebase -i origin/main"
 alias gs   "git st"
 alias gpr "gh pr create -d && gh pr view -w"
 
+alias retag "ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules"
+
 if [ -f '/Users/ags/Code/google-cloud-sdk/path.fish.inc' ]; . '/Users/ags/Code/google-cloud-sdk/path.fish.inc'; end
