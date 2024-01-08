@@ -4,6 +4,8 @@ for f in $HOME/.config/fish/env/*
 	source $f
 end
 
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
+
 abbr g git
 abbr k kubectl
 abbr v nvim
