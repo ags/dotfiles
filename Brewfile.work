@@ -1,7 +1,3 @@
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-
-brew "ansible"
 brew "asdf"
 brew "awscli"
 brew "ctags"
@@ -17,13 +13,8 @@ brew "tmux"
 brew "tree"
 brew "watch"
 
-#cask "1password"
-#cask "slack"
 cask "aws-vault"
-cask "docker"
 cask "google-cloud-sdk"
-cask "iterm2"
-cask "spotify"
 
 cask "font-source-code-pro"
 

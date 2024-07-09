@@ -1,6 +1,3 @@
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-
 brew "asdf"
 brew "awscli"
 brew "ctags"
