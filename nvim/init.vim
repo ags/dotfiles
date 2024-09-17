@@ -84,7 +84,10 @@ let g:ale_go_gometalinter_options = "--disable-all
 \ --exclude 'should have comment or'
 \"
 
-let g:ale_linters = {'go': ['gometalinter']}
+let g:ale_linters = {
+\   'go': ['gometalinter'],
+\   'ruby': ['ruby', 'rubocop'],
+\}
 
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
