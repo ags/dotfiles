@@ -4,8 +4,6 @@ for f in $HOME/.config/fish/env/*
 	source $f
 end
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
-
 abbr g git
 abbr k kubectl
 abbr v nvim
@@ -21,6 +19,7 @@ alias grm  "git rebase -i origin/main"
 alias gs   "git st"
 alias gpr "gh pr create -d && gh pr view -w"
 
-alias retag "ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules"
+alias retag "/opt/homebrew/bin/ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules"
 
 if [ -f '/Users/ags/Code/google-cloud-sdk/path.fish.inc' ]; . '/Users/ags/Code/google-cloud-sdk/path.fish.inc'; end
+fish_add_path $HOME/.local/bin
