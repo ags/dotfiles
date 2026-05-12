@@ -4,8 +4,6 @@ function link
   ln -vsfFn $argv
 end
 
-link $PWD/asdfrc $HOME/.asdfrc
-
 link $PWD/gitattributes $HOME/.gitattributes
 link $PWD/gitignore $HOME/.gitignore
 link $PWD/gitconfig $HOME/.gitconfig

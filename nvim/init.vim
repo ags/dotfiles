@@ -30,7 +30,6 @@ augroup nord-theme-overrides
 augroup END
 colorscheme nord
 
-"set shortmess=IF
 set inccommand=split
 
 let mapleader = ";"
@@ -66,10 +65,6 @@ autocmd FileType ruby setlocal iskeyword+=@-@
 
 " Enable spell checking in commit messages.
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
-
-" Treat j2 nginx templates as nginx
-autocmd BufRead,BufNewFile nginx.conf.j2 set ft=nginx
-autocmd BufRead,BufNewFile */nginx/templates/*.conf.j2 set ft=nginx
 
 " run goimports when saving go files
 let g:go_fmt_command = "goimports"

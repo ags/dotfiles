@@ -54,5 +54,3 @@
   fff = !git fetch && git status && git merge --ff-only
   tidy = !git branch --merged | grep -Ev \"(^\\*|main|master|develop)\" | xargs -n 1 git branch -d
   pt = !git pull origin main && git tidy
-[safe]
-	directory = /opt/homebrew

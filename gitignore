@@ -1,6 +1,4 @@
 .DS_Store
 tags
 .env
-results.bin
-.claude/settings.local.json
 .claude
