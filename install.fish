@@ -18,7 +18,7 @@ link $PWD/fish $HOME/.config
 
 link $PWD/nvim $HOME/.config
 
-brew bundle --file=$PWD/Brewfile
+brew bundle --no-upgrade --file=$PWD/Brewfile
 
 set plug $HOME/.local/share/nvim/site/autoload/plug.vim
 if not test -f $plug
