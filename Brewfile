@@ -21,7 +21,7 @@ brew "watch"
 
 cask "1password"
 cask "aws-vault-binary"
-cask "claude-code"
+cask "claude-code@latest"
 cask "font-source-code-pro"
 cask "gcloud-cli"
 cask "iterm2"
