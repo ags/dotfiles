@@ -6,7 +6,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'hashivim/vim-terraform'
 
 Plug 'smerrill/vcl-vim-plugin', { 'for': 'vcl' }
@@ -14,7 +14,7 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'nordtheme/vim', { 'as': 'nord-vim' }
 
 call plug#end()
 
