@@ -1,6 +1,5 @@
 tap "datadog-labs/pack"
 
-brew "ctags"
 brew "datadog-labs/pack/pup"
 brew "fish"
 brew "fzf"
@@ -16,6 +15,7 @@ brew "terraform"
 brew "the_platinum_searcher"
 brew "tmux"
 brew "tree"
+brew "universal-ctags"
 brew "vale"
 brew "watch"
 
