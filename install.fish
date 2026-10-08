@@ -7,7 +7,6 @@ end
 link $PWD/gitattributes $HOME/.gitattributes
 link $PWD/gitignore $HOME/.gitignore
 link $PWD/gitconfig $HOME/.gitconfig
-link $PWD/githelpers $HOME/.githelpers
 
 link $PWD/psqlrc $HOME/.psqlrc
 
