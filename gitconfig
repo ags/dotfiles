@@ -5,7 +5,7 @@
 [core]
   editor = nvim
   excludesfile = ~/.gitignore
-  attributesfile = /Users/ags/.gitattributes
+  attributesfile = ~/.gitattributes
 
 [init]
   defaultBranch = main
@@ -21,12 +21,13 @@
 
 [push]
   default = current
+  autoSetupRemote = true
 
 [rerere]
   enabled = true
 
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 
 [status]
   showUntrackedFiles = all
@@ -52,5 +53,5 @@
   rc = rebase --continue
   st = status -sb
   fff = !git fetch && git status && git merge --ff-only
-  tidy = !git branch --merged | grep -Ev \"(^\\*|main|master|develop)\" | xargs -n 1 git branch -d
-  pt = !git pull origin main && git tidy
+  tidy = !git for-each-ref --merged HEAD --format='%(refname:short) %(worktreepath)' refs/heads | awk 'NF == 1 && $1 !~ /^(main|master|develop)$/' | xargs -n 1 git branch -d
+  pt = !git pull origin HEAD && git tidy

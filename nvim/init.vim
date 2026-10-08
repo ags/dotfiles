@@ -6,16 +6,15 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'hashivim/vim-terraform'
 
 Plug 'smerrill/vcl-vim-plugin', { 'for': 'vcl' }
-Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'nordtheme/vim', { 'as': 'nord-vim' }
 
 call plug#end()
 
@@ -60,27 +59,18 @@ inoremap <c-c> <esc>
 
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-" Treat @foo as a single word (useful for tab completion).
-autocmd FileType ruby setlocal iskeyword+=@-@
+augroup init
+  autocmd!
 
-" Enable spell checking in commit messages.
-autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+  " Treat @foo as a single word (useful for tab completion).
+  autocmd FileType ruby setlocal iskeyword+=@-@
 
-" run goimports when saving go files
-let g:go_fmt_command = "goimports"
-
-let g:go_def_mode = 'gopls'
+  " Enable spell checking in commit messages.
+  autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+augroup END
 
 " ale config
-let g:ale_go_gometalinter_options = "--disable-all
-\ --enable=golint
-\ --enable=vet
-\ --enable=errcheck
-\ --exclude 'should have comment or'
-\"
-
 let g:ale_linters = {
-\   'go': ['gometalinter'],
 \   'ruby': ['ruby', 'rubocop'],
 \}
 

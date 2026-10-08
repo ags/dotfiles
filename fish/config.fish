@@ -20,5 +20,4 @@ alias gs   "git st"
 
 alias retag "/opt/homebrew/bin/ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules"
 
-if [ -f '/Users/ags/Code/google-cloud-sdk/path.fish.inc' ]; . '/Users/ags/Code/google-cloud-sdk/path.fish.inc'; end
 fish_add_path $HOME/.local/bin
