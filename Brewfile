@@ -14,6 +14,7 @@ brew "the_platinum_searcher"
 brew "tmux"
 brew "tree"
 brew "watch"
+brew "vale"
 
 cask "1password"
 cask "aws-vault"
