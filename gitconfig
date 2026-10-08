@@ -53,4 +53,4 @@
   st = status -sb
   fff = !git fetch && git status && git merge --ff-only
   tidy = !git for-each-ref --merged HEAD --format='%(refname:short) %(worktreepath)' refs/heads | awk 'NF == 1 && $1 !~ /^(main|master|develop)$/' | xargs -n 1 git branch -d
-  pt = !git pull origin main && git tidy
+  pt = !git pull origin HEAD && git tidy
