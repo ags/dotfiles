@@ -10,7 +10,6 @@ Plug 'w0rp/ale'
 Plug 'hashivim/vim-terraform'
 
 Plug 'smerrill/vcl-vim-plugin', { 'for': 'vcl' }
-Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
@@ -66,21 +65,8 @@ autocmd FileType ruby setlocal iskeyword+=@-@
 " Enable spell checking in commit messages.
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 
-" run goimports when saving go files
-let g:go_fmt_command = "goimports"
-
-let g:go_def_mode = 'gopls'
-
 " ale config
-let g:ale_go_gometalinter_options = "--disable-all
-\ --enable=golint
-\ --enable=vet
-\ --enable=errcheck
-\ --exclude 'should have comment or'
-\"
-
 let g:ale_linters = {
-\   'go': ['gometalinter'],
 \   'ruby': ['ruby', 'rubocop'],
 \}
 
