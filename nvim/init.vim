@@ -59,11 +59,15 @@ inoremap <c-c> <esc>
 
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-" Treat @foo as a single word (useful for tab completion).
-autocmd FileType ruby setlocal iskeyword+=@-@
+augroup init
+  autocmd!
 
-" Enable spell checking in commit messages.
-autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+  " Treat @foo as a single word (useful for tab completion).
+  autocmd FileType ruby setlocal iskeyword+=@-@
+
+  " Enable spell checking in commit messages.
+  autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+augroup END
 
 " ale config
 let g:ale_linters = {
