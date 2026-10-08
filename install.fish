@@ -10,8 +10,6 @@ link $PWD/gitconfig $HOME/.gitconfig
 
 link $PWD/psqlrc $HOME/.psqlrc
 
-link $PWD/ptconfig.toml $HOME/.ptconfig.toml
-
 link $PWD/tmux.conf $HOME/.tmux.conf
 
 link $PWD/fish $HOME/.config
