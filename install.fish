@@ -14,6 +14,8 @@ link $PWD/tmux.conf $HOME/.tmux.conf
 
 link $PWD/fish $HOME/.config
 
+link $PWD/zshenv $HOME/.zshenv
+
 link $PWD/nvim $HOME/.config
 
 brew bundle --no-upgrade --file=$PWD/Brewfile
