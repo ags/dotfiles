@@ -23,7 +23,6 @@ export PATH="$HOME/.local/bin:$PATH"
 if ! command -v mise >/dev/null; then
   curl -fsSL https://mise.run | sh
 fi
-mise use --global node@lts
 
 # The prose-lint hooks in ~/.claude call Vale, which apt doesn't package.
 vale_version=3.25.1
