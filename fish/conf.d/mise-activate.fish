@@ -7,6 +7,10 @@
 # Fish runs only the first `conf.d` file with a given name, so this one
 # replaces Homebrew's, and uses shims instead. Shims pick each tool's
 # version from the directory a command runs in.
+#
+# Fish runs conf.d before config.fish, so ~/.local/bin, where mise.run
+# installs mise on Linux, isn't on PATH yet.
+fish_add_path $HOME/.local/bin
 if command -q mise
     mise activate fish --shims | source
 end
