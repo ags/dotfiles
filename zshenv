@@ -7,6 +7,6 @@ if command -v mise >/dev/null; then
   eval "$(mise activate zsh --shims)"
 fi
 
-# By default zsh reads a word that starts with `=` as a command name and
-# swaps in its path, so an unquoted `=====` argument fails with "not found".
+# By default zsh swaps a word such as `=ls` for the path of `ls`, so an
+# unquoted `=====` argument fails with "not found".
 setopt noequals
