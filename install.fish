@@ -71,3 +71,16 @@ if test (uname) = Darwin
     defaults write com.googlecode.iterm2 "Default Bookmark Guid" -string $nord_guid
   end
 end
+
+# Rectangle imports RectangleConfig.json from its Application Support
+# directory when it launches, then renames the file. So this copies the
+# file rather than linking it, and Rectangle must be quit first, or the
+# import waits for its next launch.
+if test (uname) = Darwin
+  set rectangle "$HOME/Library/Application Support/Rectangle"
+  mkdir -p $rectangle
+  cp $PWD/rectangle/RectangleConfig.json $rectangle/RectangleConfig.json
+  if pgrep -xq Rectangle
+    echo "Rectangle is running. Quit and reopen it to import its config."
+  end
+end
