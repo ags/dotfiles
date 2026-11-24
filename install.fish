@@ -18,7 +18,7 @@ function link_config
   if test -d $target; and not test -L $target
     mv -v $target $target.bak
   end
-  link $argv[1] $HOME/.config
+  link $argv[1] $target
 end
 
 mkdir -p $HOME/.config
