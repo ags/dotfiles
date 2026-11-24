@@ -22,6 +22,19 @@ if [ -d /opt/homebrew/opt/libpq/bin ]; then
   export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 fi
 
+# The gcloud-cli cask leaves gke-gcloud-auth-plugin out of PATH, and
+# kubectl runs it to log in to a GKE cluster. fish/env/path.fish does the
+# same for fish, and explains why the SDK's bin goes at the end.
+#
+# A zsh started from fish, or from another zsh, already has the SDK's bin
+# in PATH.
+if [ -d /opt/homebrew/share/google-cloud-sdk/bin ]; then
+  case ":$PATH:" in
+    *:/opt/homebrew/share/google-cloud-sdk/bin:*) ;;
+    *) export PATH="$PATH:/opt/homebrew/share/google-cloud-sdk/bin" ;;
+  esac
+fi
+
 # Settings for one machine, such as OP_ACCOUNT when 1Password has more
 # than one account signed in, live outside this public repo.
 if [ -f "$HOME/.zshenv.local" ]; then
