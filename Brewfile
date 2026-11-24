@@ -1,6 +1,9 @@
+tap "buildkite/buildkite"
 tap "datadog-labs/pack"
 
+brew "buildkite/buildkite/bk@3"
 brew "datadog-labs/pack/pup"
+brew "direnv"
 brew "fish"
 brew "fzf"
 brew "gh"
